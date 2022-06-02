@@ -1,18 +1,23 @@
-#include<stdio.h>
-int main()
+#include <stdio.h>
+int main() 
 {
-    int N,r,rev=0,temp;
-    scanf("%d",&N);
-    temp=N;
-    while(N!=0)
-    {
-        r=N%10;
-        rev=rev*10+r;
-        N=N/10;
+    int n, rev = 0, remainder,temp;
+    
+    scanf("%d", &n);
+    temp=n;
+    while (n != 0) 
+	{
+        remainder = n % 10;
+        rev = rev * 10 + remainder;
+        n /= 10;
     }
-    if(temp==rev)
-    printf("True");
-    else
-    printf("False");
+     if(rev==temp)
+     {
+     	printf("True");
+	 }
+	 else
+	 {
+	 	printf("False");
+	 }
     return 0;
 }
