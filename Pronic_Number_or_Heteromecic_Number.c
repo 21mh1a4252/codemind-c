@@ -1,22 +1,20 @@
-#include<stdio.h>
+#include<bits/stdc++.h>
+using namespace std;
 int main()
 {
-    int n,i,flag;
-    scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    int n;
+    cin>>n;
+    for(int i=1;i<=n/2+1;i++)
     {
-       if(i*(i+1)==n)
-       {
-           flag=1;
-           break;
-       }
+        if(i*i+1==n)
+        {
+            cout<<"NO";
+            n=-1;
+            break;
+        }
     }
-    if(flag==1)
+    if(n!=-1)
     {
-        printf("YES");
-    }
-    else
-    {
-        printf("NO");
+        cout<<"YES";
     }
 }
